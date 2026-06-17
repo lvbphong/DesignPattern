@@ -1,40 +1,36 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int _sum(int a, int b){
-    return a+b;
-};
-
-int _sum(int a, int b, int c){
-    return a+b+c;
-};
 
 
-class User {
-public:
-    virtual void getPermission(){
-        cout << "User can see limited info" << endl;
-    }
-};
-class SuperUser : public User {
-public:
-    void getPermission(){
-        cout << "SuperUser can see limited info" << endl;
-    }
-};
+
 int main() {
-    cout << _sum(1,2) << endl;
-    cout << _sum(1,2,3) << endl;
+    int N;
+    cin >> N;
+    vector<int> arr(N);
+    for(int i=0; i<N; i++){
+        cin >> arr[i];
+    } 
+    int res = 0;
 
-    User u;
-    SuperUser su;
-    list<User*> ls;
-    ls.push_back(&u);
-    ls.push_back(&su);
+    for(int i=0 ; i<=N; i++){
+        for(int j=0; j<=N ; j++){
+            if(i + j  > N) continue;
+            long long A = 0;
+            long long B = 0;
+            for(int k = 0; k < i; k++){
+                A+= arr[k];
+            }
+            for(int k = N-j; k < N; k++){
+                B+= arr[k];
+            }
 
-    for(auto item : ls){
-        item->getPermission();
+            if(A == B){
+                res = max(res, i+j);
+            }
+        }
     }
-    
+
+    cout << res;
     return 0;
 }

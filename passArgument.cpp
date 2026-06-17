@@ -33,6 +33,15 @@ int main(){
     for(int i=0; i<size; i++){
         cout << *(myArray+i);
     }
+    delete myArray[];
+    myArray = NULL;
+    int col = 3, row =3 ;
+    int **table = new int*[row];
+
+    for(int i=0; i< row; i++){
+        table[i] = new int[col];
+    }
+    table[1][1] = 0;
 
     return 0;
 }

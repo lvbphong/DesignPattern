@@ -38,9 +38,7 @@ int main(){
         gCondition_variable.notify_one();
 
     });
-        reporter.join();
-        work.join();
-        return 0;
-
-
+    reporter.join();
+    work.join();
+    return 0;
 }

@@ -1,0 +1,1 @@
+{"name":"Local: static_dynamic_binding","url":"d:\\Study\\Technical\\DesignPattern\\static_dynamic_binding.cpp","tests":[{"id":1756625079569,"input":"9\n7 3 20 5 15 1 11 8 10","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Study\\Technical\\DesignPattern\\static_dynamic_binding.cpp","group":"local","local":true}

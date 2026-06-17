@@ -1,0 +1,1 @@
+{"name":"Local: temp","url":"d:\\Study\\Technical\\DesignPattern\\temp.cpp","tests":[{"id":1754729423359,"input":"4 6 3\n1 2 1\n1 3 3\n2 3 2\n2 4 6\n3 2 8\n3 4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Study\\Technical\\DesignPattern\\temp.cpp","group":"local","local":true}
