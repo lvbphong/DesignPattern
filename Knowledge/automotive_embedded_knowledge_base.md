@@ -508,7 +508,7 @@ private:
     GLuint m_texture;
 };
 ```
-
+Sau khi Camera Sensor và ISP tạo ra một frame, Camera Driver sử dụng DMA để ghi trực tiếp dữ liệu vào một DMA Buffer trong bộ nhớ hệ thống (DDR), không cần CPU thực hiện memcpy. Sau đó Camera Framework sẽ chia sẻ hoặc import DMA Buffer này sang GPU, thường thông qua EGLImage hoặc GraphicBuffer, để tạo thành một OpenGL Texture. Fragment Shader sẽ đọc Texture này, xử lý nếu cần (ví dụ chuyển YUV sang RGB, xoay hoặc mirror), rồi ghi kết quả vào Framebuffer trước khi hiển thị lên màn hình.
 > [!TIP]
 > Always disable copy semantics and enable move semantics for RAII wrappers around GPU handles to prevent double-free issues.
 
