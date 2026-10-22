@@ -7,6 +7,19 @@
 
 ---
 
+Question:
+Port service Linux to android:
+Các bước nhúng một Linux service vào Android:
+1. Port source code: Chỉnh sửa service Linux để tương thích với Android và các thư viện của AOSP.
+2. Tạo Android.bp: Khai báo cách build service thành executable.
+3. Tạo file .rc: Cấu hình Android Init khởi chạy service khi boot.
+4. Cấu hình SELinux: Khai báo quyền chạy và quyền truy cập cần thiết.
+5. Thêm vào PRODUCT_PACKAGES: Để service được đóng gói vào image Android.
+6. Build và flash: Build AOSP, flash image rồi kiểm tra service bằng adb và logcat.
+7. Tích hợp giao tiếp nếu cần: Nếu app hoặc framework cần gọi service, triển khai IPC như AIDL/Binder hoặc Unix domain socket.
+
+
+
 ## Table of Contents
 
 1. [Professional Profile](#1-professional-profile)
